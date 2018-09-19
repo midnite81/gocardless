@@ -9,7 +9,7 @@ return [
     |  Specify whether you wish to run sandbox or production
     |
     */
-    'environment' => env('GOCARDLSS_ENVIRONMENT', 'production'),
+    'environment' => env('GOCARDLESS_ENVIRONMENT', 'production'),
 
     /*
     |--------------------------------------------------------------------------

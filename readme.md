@@ -1,0 +1,1 @@
+# A Laravel 5 integration for GoCardless 

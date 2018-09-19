@@ -24,5 +24,19 @@
             "src/Helpers/gocardless.php"
         ]
     },
+    "extra": {
+        "component": "package",
+        "laravel": {
+            "providers": [
+                "Midnite81\\GoCardless\\GoCardlessServiceProvider"
+            ],
+            "aliases": {
+                "GoCardless": "Midnite81\\GoCardless\\Facades\\GoCardless"
+            }
+        },
+        "frameworks": [
+            "Laravel 5"
+        ]
+    },
     "minimum-stability": "stable"
 }

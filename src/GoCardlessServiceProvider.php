@@ -18,6 +18,8 @@ class GoCardlessServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../config/gocardless.php' => config_path('gocardless.php')
         ]);
+
+        $this->mergeConfigFrom(__DIR__ . '/../config/gocardless.php', 'gocardless');
     }
 
     /**

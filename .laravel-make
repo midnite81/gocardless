@@ -127,7 +127,7 @@ BASE_NAMESPACE=Midnite81\GoCardless
 ## The path the migration files should be stored in. By default this will prepend the base path.
 ## Defaults to 'database/migrations'
 
-# MIGRATION_PATH=migrations
+MIGRATION_PATH=src/Database/Migrations
 
 ## =====================================================================================================================
 ## Model Path
@@ -135,7 +135,7 @@ BASE_NAMESPACE=Midnite81\GoCardless
 ## The path the model files should be stored in. By default this will prepend the base path.
 ## Defaults to '{BASE_PATH}'
 
-# MODEL_PATH=src/Models
+MODEL_PATH=src/Models
 
 ## =====================================================================================================================
 ## Model Namespace
@@ -143,7 +143,7 @@ BASE_NAMESPACE=Midnite81\GoCardless
 ## The namespace that will be prepended to all models.
 ## Defaults to '{BASE_NAMESPACE}\Models'
 
-# MODEL_NAMESPACE=Example\Package\Models
+MODEL_NAMESPACE=Midnite81\GoCardless\Models
 
 ## =====================================================================================================================
 ## Notification Path

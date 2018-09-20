@@ -1,6 +1,7 @@
 <?php
 namespace Midnite81\GoCardless\Services;
 
+use GoCardlessPro\Client as GoCardlessClient;
 use Midnite81\GoCardless\Contracts\Services\Client as Contract;
 
 class Client implements Contract
@@ -28,14 +29,12 @@ class Client implements Contract
     /**
      * Get the client
      *
-     * @return Client
+     * @return GoCardlessClient
+     * @throws \Exception
      */
     public function getClient()
     {
-        return new Client([
-            'access_token' => $this->accessToken,
-            'environment'  => $this->environment,
-        ]);
+        return new GoCardlessClient($this->getCredentials());
     }
 
     /**
@@ -115,5 +114,18 @@ class Client implements Contract
     {
         $this->accessToken = ! empty($this->overrideAccessToken) ? $this->overrideAccessToken : gocardless_env('api_key');
         $this->environment = ! empty($this->overrideEnvironment) ? $this->overrideEnvironment : gocardless_env('environment');
+    }
+
+    /**
+     * Get Credentials
+     *
+     * @return array
+     */
+    protected function getCredentials()
+    {
+        return [
+            'access_token' => $this->accessToken,
+            'environment'  => $this->environment,
+        ];
     }
 }

@@ -38,4 +38,12 @@ return [
     */
     'requests_per_minute' => '1000',
 
+    /*
+    |--------------------------------------------------------------------------
+    | Publish Migrations
+    |--------------------------------------------------------------------------
+    | Whether to publish or load migrations with this package
+    |
+    */
+    'publish-migrations' => env('GOCARDLESS_PUBLISH_MIGRATIONS', false)
 ];

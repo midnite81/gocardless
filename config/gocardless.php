@@ -45,5 +45,16 @@ return [
     | Whether to publish or load migrations with this package
     |
     */
-    'publish-migrations' => env('GOCARDLESS_PUBLISH_MIGRATIONS', false)
+    'publish_migrations' => env('GOCARDLESS_PUBLISH_MIGRATIONS', false),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Table Prefixes
+    |--------------------------------------------------------------------------
+    | You can prefix the migrations that come with this package, but once the
+    | migrations have run, please do not change this setting as the models are
+    | also set up to reference this setting.
+    |
+    */
+    'table_prefix' => '',
 ];

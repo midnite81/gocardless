@@ -33,5 +33,19 @@ if ( ! function_exists('gocardless')) {
     {
        return app('gocardless');
     }
+}
+
+if ( ! function_exists('gocardless_table_prefix')) {
+
+    /**
+     * GoCardless Table Prefix
+     */
+    function gocardless_table_prefix($tableName)
+    {
+       if (! empty(config('gocardless.table_prefix', ''))) {
+           return config('gocardless.table_prefix', '') . '_' . $tableName;
+       }
+       return $tableName;
+    }
 
 }

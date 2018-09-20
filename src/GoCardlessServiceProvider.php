@@ -20,6 +20,8 @@ class GoCardlessServiceProvider extends ServiceProvider
         ]);
 
         $this->mergeConfigFrom(__DIR__ . '/../config/gocardless.php', 'gocardless');
+
+        $this->loadMigrations();
     }
 
     /**
@@ -31,5 +33,20 @@ class GoCardlessServiceProvider extends ServiceProvider
     {
         $this->app->singleton(Client::class, ConcreteClient::class);
         $this->app->alias(Client::class, 'gocardless');
+    }
+
+    /**
+     * Load the migrations
+     */
+    protected function loadMigrations()
+    {
+        if (method_exists($this, 'loadMigrationsFrom')) {
+            $this->loadMigrationsFrom(__DIR__ . '/Database/Migrations');
+        } else {
+            $this->publishes([
+                __DIR__ . '/Database/Migrations' => database_path('migrations')
+            ], 'migrations');
+        }
+
     }
 }

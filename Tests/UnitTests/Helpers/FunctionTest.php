@@ -39,4 +39,25 @@ class FunctionTest extends BaseTestCase
         $this->assertInternalType('string', $environment);
         $this->assertEquals('live', $environment);
     }
+
+    /**
+     * @test
+     */
+    public function it_prefixes_the_table_name()
+    {
+        config()->set('gocardless.table_prefix', 'banana');
+        $tableName = gocardless_table_prefix('transaction');
+
+        $this->assertEquals('banana_transaction', $tableName);
+    }
+    
+    /** 
+     * @test 
+     */
+    public function it_returns_only_the_table_name_if_no_prefix()
+    {
+        $tableName = gocardless_table_prefix('transaction');
+
+        $this->assertEquals('transaction', $tableName);
+    }
 }

@@ -30,7 +30,7 @@ class CreateGocardelssTransactionDataTable extends Migration
             $table->string('value');
             $table->timestamps();
 
-            $table->foreign('transaction_id')->references('id')->on('transactions')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('transaction_id')->references('id')->on(gocardless_table_prefix('gocardless_transactions'))->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

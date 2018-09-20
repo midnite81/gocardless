@@ -25,9 +25,12 @@ class CreateGocardelssTransactionDataTable extends Migration
     {
         Schema::create($this->tableName, function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('transaction_id');
             $table->string('key');
             $table->string('value');
             $table->timestamps();
+
+            $table->foreign('transaction_id')->references('id')->on('transactions')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

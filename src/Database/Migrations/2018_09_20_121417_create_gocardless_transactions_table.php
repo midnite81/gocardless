@@ -25,10 +25,13 @@ class CreateGocardlessTransactionsTable extends Migration
     {
         Schema::create($this->tableName, function (Blueprint $table) {
             $table->increments('id');
-            $table->morphs('transactionable');
-            $table->string('action');
+            $table->string('transactionable_type')->nullable();
+            $table->unsignedBigInteger("transactionable_id")->nullable();
+            $table->string('action')->nullable();
             $table->timestamps();
             $table->softDeletes();
+
+            $table->index(["transactionable_type", "transactionable_id"], null);
         });
     }
 

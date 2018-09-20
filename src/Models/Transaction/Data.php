@@ -2,6 +2,7 @@
 namespace Midnite81\GoCardless\Models\Transaction;
 
 use Midnite81\GoCardless\Models\Model;
+use Midnite81\GoCardless\Models\Transaction;
 
 class Data extends Model
 {
@@ -18,4 +19,14 @@ class Data extends Model
      * @var array
      */
     protected $guarded = ['id'];
+
+    /**
+     * The Transaction Relationship
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function transaction()
+    {
+        return $this->belongsTo(Transaction::class);
+    }
 }

@@ -31,7 +31,7 @@ class CreateGocardlessTransactionsTable extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->index(["transactionable_type", "transactionable_id"], null);
+            $table->index(["transactionable_type", "transactionable_id"], $this->tableName . '_morphs');
         });
     }
 

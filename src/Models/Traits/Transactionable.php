@@ -1,6 +1,8 @@
 <?php
 namespace Midnite81\GoCardless\Models\Traits;
 
+use Midnite81\GoCardless\Models\Transaction;
+
 trait Transactionable
 {
     /**

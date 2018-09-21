@@ -20,6 +20,7 @@ class CreateGocardelssTransactionDataTable extends Migration
      * Run the migrations.
      *
      * @return void
+     * @codeCoverageIgnore
      */
     public function up()
     {
@@ -38,6 +39,7 @@ class CreateGocardelssTransactionDataTable extends Migration
      * Reverse the migrations.
      *
      * @return void
+     * @codeCoverageIgnore
      */
     public function down()
     {

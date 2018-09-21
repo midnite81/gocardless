@@ -20,6 +20,7 @@ class CreateGocardlessTransactionsTable extends Migration
      * Run the migrations.
      *
      * @return void
+     * @codeCoverageIgnore
      */
     public function up()
     {
@@ -39,6 +40,7 @@ class CreateGocardlessTransactionsTable extends Migration
      * Reverse the migrations.
      *
      * @return void
+     * @codeCoverageIgnore
      */
     public function down()
     {

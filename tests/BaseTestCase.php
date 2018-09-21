@@ -14,7 +14,11 @@ abstract class BaseTestCase extends OrchestraTestCase
     protected function setUp()
     {
         parent::setUp();
+        $this->loadFactories();
+        $this->artisan('migrate');
+
     }
+
 
     /**
      * Get package providers
@@ -28,4 +32,14 @@ abstract class BaseTestCase extends OrchestraTestCase
             GoCardlessServiceProvider::class,
         ];
     }
+
+    /**
+     * Load the model factories.
+     */
+    protected function loadFactories()
+    {
+        $this->withFactories(__DIR__ . '/factories');
+    }
+
+
 }

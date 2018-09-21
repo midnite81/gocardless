@@ -41,10 +41,10 @@ class GoCardlessServiceProvider extends ServiceProvider
     protected function loadMigrations()
     {
         if (method_exists($this, 'loadMigrationsFrom')) {
-            $this->loadMigrationsFrom(__DIR__ . '/Database/Migrations');
+            $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
         } else {
             $this->publishes([
-                __DIR__ . '/Database/Migrations' => database_path('migrations')
+                __DIR__ . '/database/migrations' => database_path('migrations')
             ], 'migrations');
         }
 

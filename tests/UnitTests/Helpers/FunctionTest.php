@@ -43,6 +43,30 @@ class FunctionTest extends BaseTestCase
     /**
      * @test
      */
+    public function it_returns_null_if_environment_is_not_found()
+    {
+        config()->set('gocardless.environment', 'test');
+
+        $env = gocardless_env();
+
+        $this->assertNull($env);
+    }
+
+    /**
+     * @test
+     */
+    public function it_returns_null_if_the_environments_key_is_empty()
+    {
+        config()->set('gocardless', null);
+
+        $env = gocardless_env();
+
+        $this->assertNull($env);
+    }
+
+    /**
+     * @test
+     */
     public function it_prefixes_the_table_name()
     {
         config()->set('gocardless.table_prefix', 'banana');

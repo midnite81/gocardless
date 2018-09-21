@@ -21,7 +21,9 @@ class GoCardlessServiceProvider extends ServiceProvider
 
         $this->mergeConfigFrom(__DIR__ . '/../config/gocardless.php', 'gocardless');
 
-        $this->loadMigrations();
+        if (config('gocardless.publish_migrations')) {
+            $this->loadMigrations();
+        }
     }
 
     /**

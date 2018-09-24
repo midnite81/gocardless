@@ -21,6 +21,8 @@ class GoCardlessServiceProvider extends ServiceProvider
 
         $this->mergeConfigFrom(__DIR__ . '/../config/gocardless.php', 'gocardless');
 
+        $this->loadRoutes();
+
         if (config('gocardless.publish_migrations')) {
             $this->loadMigrations();
         }
@@ -35,6 +37,17 @@ class GoCardlessServiceProvider extends ServiceProvider
     {
         $this->app->singleton(Client::class, ConcreteClient::class);
         $this->app->alias(Client::class, 'gocardless');
+    }
+
+    public function loadRoutes()
+    {
+        if (method_exists($this, 'loadRoutesFrom')) {
+            $this->loadRoutesFrom(__DIR__ . '/Routes/webhook.php');
+        } else {
+            if (! $this->app->routesAreCached()) {
+                require __DIR__ . '/Routes/webhook.php';
+            }
+        }
     }
 
     /**

@@ -38,7 +38,7 @@ BASE_NAMESPACE=Midnite81\GoCardless
 ## The namespace that will be prepended to all console commands.
 ## Defaults to '{BASE_NAMESPACE}\Console\Commands'
 
-# CONSOLE_NAMESPACE=Example\Package\Commands
+# CONSOLE_NAMESPACE=Midnite81\GoCardless\Commands
 
 ## =====================================================================================================================
 ## Controller Path
@@ -54,7 +54,7 @@ BASE_NAMESPACE=Midnite81\GoCardless
 ## The namespace that will be prepended to all controllers.
 ## Defaults to '{BASE_NAMESPACE}\Http\Controllers'
 
-# CONTROLLER_NAMESPACE=Example\Package\Controllers
+# CONTROLLER_NAMESPACE=Midnite81\GoCardless\Controllers
 
 
 ## =====================================================================================================================
@@ -63,7 +63,7 @@ BASE_NAMESPACE=Midnite81\GoCardless
 ## The path the event files should be stored in. By default this will prepend the base path.
 ## Defaults to '{BASE_PATH}/Events'
 
-# EVENT_PATH=src/Events
+EVENT_PATH=src/Events
 
 ## =====================================================================================================================
 ## Event Namespace
@@ -71,7 +71,7 @@ BASE_NAMESPACE=Midnite81\GoCardless
 ## The namespace that will be prepended to all events.
 ## Defaults to '{BASE_NAMESPACE}\Events'
 
-# EVENT_NAMESPACE=Example\Package\Events
+EVENT_NAMESPACE=Midnite81\GoCardless\Events
 
 ## =====================================================================================================================
 ## Listener Path
@@ -79,7 +79,7 @@ BASE_NAMESPACE=Midnite81\GoCardless
 ## The path the listener files should be stored in. By default this will prepend the base path.
 ## Defaults to '{BASE_PATH}/Listeners'
 
-# LISTENER_PATH=src/Listeners
+LISTENER_PATH=src/Listeners
 
 ## =====================================================================================================================
 ## Listener Namespace
@@ -87,7 +87,7 @@ BASE_NAMESPACE=Midnite81\GoCardless
 ## The namespace that will be prepended to all listeners.
 ## Defaults to '{BASE_NAMESPACE}\Listeners'
 
-# LISTENER_NAMESPACE=Example\Package\Listeners
+LISTENER_NAMESPACE=Midnite81\GoCardless\Listeners
 
 ## =====================================================================================================================
 ## Mail Path
@@ -103,7 +103,7 @@ BASE_NAMESPACE=Midnite81\GoCardless
 ## The namespace that will be prepended to all mail classes.
 ## Defaults to '{BASE_NAMESPACE}\Mail'
 
-# MAIL_NAMESPACE=Example\Package\Mail
+# MAIL_NAMESPACE=Midnite81\GoCardless\Mail
 
 ## =====================================================================================================================
 ## Middleware Path
@@ -119,7 +119,7 @@ BASE_NAMESPACE=Midnite81\GoCardless
 ## The namespace that will be prepended to all middleware classes.
 ## Defaults to '{BASE_NAMESPACE}\Middleware'
 
-# MIDDLWARE_NAMESPACE=Example\Package\Middleware
+# MIDDLWARE_NAMESPACE=Midnite81\GoCardless\Middleware
 
 ## =====================================================================================================================
 ## Migration Path
@@ -127,7 +127,7 @@ BASE_NAMESPACE=Midnite81\GoCardless
 ## The path the migration files should be stored in. By default this will prepend the base path.
 ## Defaults to 'database/migrations'
 
-MIGRATION_PATH=src/Database/Migrations
+MIGRATION_PATH=src/database/migrations
 
 ## =====================================================================================================================
 ## Model Path
@@ -159,7 +159,7 @@ MODEL_NAMESPACE=Midnite81\GoCardless\Models
 ## The namespace that will be prepended to all notifications.
 ## Defaults to '{BASE_NAMESPACE}\Notifications'
 
-# NOTIFICATION_NAMESPACE=Example\Package\Notifications
+# NOTIFICATION_NAMESPACE=Midnite81\GoCardless\Notifications
 
 ## =====================================================================================================================
 ## Policy Path
@@ -175,7 +175,7 @@ MODEL_NAMESPACE=Midnite81\GoCardless\Models
 ## The namespace that will be prepended to all policies.
 ## Defaults to '{BASE_NAMESPACE}\Policies'
 
-# POLICY_NAMESPACE=Example\Package\Policies
+# POLICY_NAMESPACE=Midnite81\GoCardless\Policies
 
 ## =====================================================================================================================
 ## Provider Path
@@ -205,9 +205,9 @@ PROVIDER_NAMESPACE=Midnite81\GoCardless\Providers
 ## Request Namespace
 ## =====================================================================================================================
 ## The namespace that will be prepended to all requests.
-## Defaults to '{BASE_NAMESPACE}\Requests'
+## Defaults to '{BASE_NAMESPACE}\Requests'event
 
-# REQUEST_NAMESPACE=Example\Package\Requests
+# REQUEST_NAMESPACE=Midnite81\GoCardless\Requests
 
 ## =====================================================================================================================
 ## Seeder Path

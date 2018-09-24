@@ -21,12 +21,16 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Midnite81\\GoCardless\\": "src/",
-            "Midnite81\\GoCardless\\Tests\\": "tests/"
+            "Midnite81\\GoCardless\\": "src/"
         },
         "files": [
             "src/Helpers/gocardless.php"
         ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Midnite81\\GoCardless\\Tests\\": "tests/"
+        }
     },
     "extra": {
         "component": "package",

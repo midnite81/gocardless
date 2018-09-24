@@ -42,10 +42,10 @@ class GoCardlessServiceProvider extends ServiceProvider
     public function loadRoutes()
     {
         if (method_exists($this, 'loadRoutesFrom')) {
-            $this->loadRoutesFrom(__DIR__ . '/Routes/webhook.php');
+            $this->loadRoutesFrom(__DIR__ . '/../routes/webhook.php');
         } else {
             if (! $this->app->routesAreCached()) {
-                require __DIR__ . '/Routes/webhook.php';
+                require __DIR__ . '/../routes/webhook.php';
             }
         }
     }
@@ -56,12 +56,11 @@ class GoCardlessServiceProvider extends ServiceProvider
     protected function loadMigrations()
     {
         if (method_exists($this, 'loadMigrationsFrom')) {
-            $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
+            $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
         } else {
             $this->publishes([
-                __DIR__ . '/database/migrations' => database_path('migrations')
+                __DIR__ . '/../database/migrations' => database_path('migrations')
             ], 'migrations');
         }
-
     }
 }

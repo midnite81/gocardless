@@ -9,7 +9,7 @@
          verbose="true"
 >
     <testsuite name="default">
-        <directory suffix="Test.php">Tests</directory>
+        <directory suffix="Test.php">tests</directory>
     </testsuite>
 
     <filter>

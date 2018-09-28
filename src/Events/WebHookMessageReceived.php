@@ -16,9 +16,24 @@ class WebHookMessageReceived
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
     /**
-     * @var false|string
+     * @var array
      */
     protected $data;
+
+    /**
+     * @var string
+     */
+    protected $ip;
+
+    /**
+     * @var string
+     */
+    protected $url;
+
+    /**
+     * @var string
+     */
+    protected $method;
 
     /**
      * Create a new event instance.
@@ -27,11 +42,11 @@ class WebHookMessageReceived
      */
     public function __construct(Request $request)
     {
-        $this->data = [
-          'data' => $request->post(),
-          'ip' => $request->ip(),
-          'url' => $request->fullUrl()
-        ];
+          $this->data = $request->all();
+          $this->ip = $request->ip();
+          $this->url = $request->fullUrl();
+          $this->method = $request->method();
+
     }
 
     /**
@@ -41,7 +56,7 @@ class WebHookMessageReceived
      */
     public function getData()
     {
-        return $this->data['data'];
+        return $this->data;
     }
 
     /**
@@ -51,7 +66,7 @@ class WebHookMessageReceived
      */
     public function getIp()
     {
-        return $this->data['ip'];
+        return $this->ip;
     }
 
     /**
@@ -61,7 +76,15 @@ class WebHookMessageReceived
      */
     public function getUrl()
     {
-        return $this->data['url'];
+        return $this->url;
+    }
+
+    /**
+     *
+     */
+    public function getMethod()
+    {
+        return $this->method;
     }
 
     /**

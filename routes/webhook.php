@@ -7,5 +7,5 @@ if (! empty(config('gocardless.middleware'))) {
     $config['middleware'] = config('gocardless.middleware');
 }
 Route::group($config, function($router) {
-    $router->any('/webhook', 'WebHookController@index')->name('midnite81.gocardless.webhook');
+    $router->post('/webhook', 'WebHookController@index')->name('midnite81.gocardless.webhook');
 });

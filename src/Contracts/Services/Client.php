@@ -1,13 +1,16 @@
 <?php
 namespace Midnite81\GoCardless\Contracts\Services;
 
+use GoCardlessPro\Client as GoCardlessClient;
+
 interface Client
 {
 
     /**
      * Get the client
      *
-     * @return \Midnite81\GoCardless\Services\Client
+     * @return GoCardlessClient
+     * @throws \Exception
      */
     public function getClient();
 

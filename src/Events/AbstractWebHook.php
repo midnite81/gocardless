@@ -2,6 +2,8 @@
 
 namespace Midnite81\GoCardless\Events;
 
+use Illuminate\Http\Request;
+
 abstract class AbstractWebHook
 {
     /**

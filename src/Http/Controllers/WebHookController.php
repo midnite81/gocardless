@@ -4,7 +4,9 @@ namespace Midnite81\GoCardless\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+
 use Midnite81\GoCardless\Events\WebHookMessageReceived51;
+use Midnite81\GoCardless\Events\WebHookMessageReceived54;
 
 class WebHookController extends Controller
 {
@@ -13,7 +15,7 @@ class WebHookController extends Controller
         if (app()->version() < 5.4) {
             event(new WebHookMessageReceived51($request));
         } else {
-            event(new WebHookMessageReceived51($request));
+            event(new WebHookMessageReceived54($request));
         }
 
     }

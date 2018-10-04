@@ -3,6 +3,7 @@ $config = [
     'namespace' => 'Midnite81\GoCardless\Http\Controllers',
     'prefix' => config('gocardless.route_prefix', 'gocardless'),
 ];
+
 if (! empty(config('gocardless.middleware'))) {
     $config['middleware'] = config('gocardless.middleware', 'web');
 }

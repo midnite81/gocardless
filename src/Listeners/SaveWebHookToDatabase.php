@@ -32,7 +32,7 @@ class SaveWebHookToDatabase
         $url = $event->getUrl();
 
         WebHook::create([
-           'data' => $data,
+           'data' => json_encode($data),
            'ip' => $ip,
            'url' => $url,
         ]);

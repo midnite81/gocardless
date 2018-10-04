@@ -22,6 +22,7 @@ class SaveWebHookToDatabase
      * Handle the event.
      *
      * @param  object  $event
+     * @codeCoverageIgnore
      * @return void
      */
     public function handle($event)

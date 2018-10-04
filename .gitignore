@@ -1,0 +1,12 @@
+/.idea
+/build
+/node_modules
+/public/storage
+/storage/*.key
+/vendor
+Homestead.json
+Homestead.yaml
+.env
+_ide_helper.php
+composer.lock
+.DS_Store

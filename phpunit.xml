@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/6.5/phpunit.xsd"
+         bootstrap="./vendor/autoload.php"
+         forceCoversAnnotation="false"
+         beStrictAboutCoversAnnotation="true"
+         beStrictAboutOutputDuringTests="true"
+         beStrictAboutTodoAnnotatedTests="true"
+         verbose="true"
+>
+    <testsuite name="default">
+        <directory suffix="Test.php">tests</directory>
+    </testsuite>
+
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">src</directory>
+        </whitelist>
+    </filter>
+
+    <php>
+        <includePath>.</includePath>
+        <server name="REQUEST_URI" value="http://dev.testing.com"/>
+        <server name="HTTP_HOST" value="dev.testing.com"/>
+        <env name="APP_ENV" value="testing"/>
+        <env name="CACHE_DRIVER" value="array"/>
+        <env name="SESSION_DRIVER" value="array"/>
+        <env name="QUEUE_DRIVER" value="sync"/>
+        <env name="DB_CONNECTION" value="sqlite"></env>
+        <env name="DB_DATABASE" value=":memory:"></env>
+        <env name="APP_URL" value="http://dev.testing.com"></env>
+        <env name="GOCARDLESS_PUBLISH_MIGRATIONS" value="true"></env>
+    </php>
+
+    <logging>
+        <log type="coverage-clover" target="build/logs/clover.xml"/>
+        <log type="coverage-html" target="build/coverage/" lowUpperBound="35" highLowerBound="70"/>
+    </logging>
+</phpunit>

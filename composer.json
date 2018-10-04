@@ -1,0 +1,50 @@
+{
+    "name": "midnite81/gocardless",
+    "description": "A Laravel 5 Intergration for GoCardless",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Simon Rogers",
+            "email": "webdev@centralblue.co.uk"
+        }
+    ],
+    "require": {
+        "laravel/framework": "^5.0",
+        "gocardless/gocardless-pro": "^2.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.0|^6.0|^7.0",
+        "orchestra/testbench": "^3.0|^3.1|^3.2|^3.3|^3.4|^3.6|^3.7",
+        "satooshi/php-coveralls": "1.0.*",
+        "mockery/mockery": "^1.1"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Midnite81\\GoCardless\\": "src/"
+        },
+        "files": [
+            "src/Helpers/gocardless.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Midnite81\\GoCardless\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "component": "package",
+        "laravel": {
+            "providers": [
+                "Midnite81\\GoCardless\\GoCardlessServiceProvider"
+            ],
+            "aliases": {
+                "GoCardless": "Midnite81\\GoCardless\\Facades\\GoCardless"
+            }
+        },
+        "frameworks": [
+            "Laravel 5"
+        ]
+    },
+    "minimum-stability": "stable"
+}
